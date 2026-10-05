@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 320" role="img" aria-labelledby="title">
+  <title id="title">Monitor Full HD de 27 pulgadas</title>
+  <defs>
+    <linearGradient id="screen" x1="109" y1="72" x2="305" y2="223" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#AB91FF"/>
+      <stop offset=".55" stop-color="#7A7EE9"/>
+      <stop offset="1" stop-color="#FFAB99"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="210" cy="270" rx="119" ry="16" fill="#5F4CB5" opacity=".14"/>
+  <rect x="62" y="49" width="296" height="183" rx="17" fill="#29263E"/>
+  <rect x="72" y="59" width="276" height="163" rx="10" fill="url(#screen)"/>
+  <path d="M72 181c45-42 79-47 111-23 28 20 45 15 66-8 26-28 55-31 99-4v76H72v-41Z" fill="#F4D1FF" opacity=".8"/>
+  <path d="M72 199c41-29 73-24 105-4 39 25 65 9 94-14 25-19 49-20 77-4v45H72v-23Z" fill="#6254B9" opacity=".82"/>
+  <path d="M198 232h24v27h-24z" fill="#4A465F"/>
+  <path d="M165 265h90l-9 9h-72l-9-9Z" fill="#77728C"/>
+  <circle cx="211" cy="240" r="2" fill="#FF9C8D"/>
+</svg>

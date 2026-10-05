@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 320" role="img" aria-labelledby="title">
+  <title id="title">Auriculares inalámbricos violeta</title>
+  <defs>
+    <linearGradient id="band" x1="92" y1="74" x2="325" y2="246" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9177F1"/>
+      <stop offset="1" stop-color="#5537C9"/>
+    </linearGradient>
+    <linearGradient id="cup" x1="121" y1="146" x2="302" y2="279" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5440B8"/>
+      <stop offset="1" stop-color="#302565"/>
+    </linearGradient>
+  </defs>
+  <path d="M93 184V154a117 117 0 0 1 234 0v30" fill="none" stroke="#C7B9FF" stroke-linecap="round" stroke-width="28"/>
+  <path d="M94 183v-28a116 116 0 0 1 232 0v28" fill="none" stroke="url(#band)" stroke-linecap="round" stroke-width="20"/>
+  <rect x="70" y="158" width="79" height="131" rx="34" fill="url(#cup)" transform="rotate(-7 70 158)"/>
+  <rect x="271" y="153" width="79" height="131" rx="34" fill="url(#cup)" transform="rotate(7 271 153)"/>
+  <rect x="85" y="174" width="49" height="96" rx="23" fill="#8E79E7" transform="rotate(-7 85 174)"/>
+  <rect x="285" y="170" width="49" height="96" rx="23" fill="#8E79E7" transform="rotate(7 285 170)"/>
+  <path d="M115 195v47M305 192v47" stroke="#C8BDFF" stroke-linecap="round" stroke-width="5" opacity=".75"/>
+  <circle cx="211" cy="96" r="7" fill="#FF9A86"/>
+</svg>
