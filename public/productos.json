@@ -1,23 +1,29 @@
 [
   {
     "id": 1,
-    "nombre": "Teclado Mecánico RGB",
-    "precio": 45000,
-    "descripcion": "Teclado mecánico switches azules con iluminación RGB personalizable.",
-    "imagen": "/product-placeholder.svg"
+    "nombre": "Auriculares Cloud",
+    "categoria": "Audio",
+    "etiqueta": "MÁS ELEGIDO",
+    "precio": 58990,
+    "descripcion": "Sonido envolvente, conexión inalámbrica y hasta 30 horas de batería para acompañarte todo el día.",
+    "imagen": "images/headphones.svg"
   },
   {
     "id": 2,
-    "nombre": "Mouse Gamer 16000 DPI",
-    "precio": 25000,
-    "descripcion": "Mouse óptico ergonómico con sensor de alta precisión.",
-    "imagen": "/product-placeholder.svg"
+    "nombre": "Teclado Nebula",
+    "categoria": "Accesorios",
+    "etiqueta": "MECÁNICO",
+    "precio": 72990,
+    "descripcion": "Switches precisos, iluminación RGB y una construcción compacta pensada para tu setup.",
+    "imagen": "images/keyboard.svg"
   },
   {
     "id": 3,
-    "nombre": "Monitor Gamer 24 Pulgadas",
-    "precio": 120000,
-    "descripcion": "Pantalla Full HD 144Hz 1ms panel IPS para máxima fluidez.",
-    "imagen": "/product-placeholder.svg"
+    "nombre": "Monitor Prisma 27″",
+    "categoria": "Monitores",
+    "etiqueta": "FULL HD · 144 HZ",
+    "precio": 189990,
+    "descripcion": "Colores vibrantes y movimientos fluidos en una pantalla ideal para jugar y crear.",
+    "imagen": "images/monitor.svg"
   }
 ]
