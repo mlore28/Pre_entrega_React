@@ -23,7 +23,7 @@ export const ItemListContainer = () => {
     <section className="catalog">
       <div className="section-heading">
         <div>
-          <span className="eyebrow">LA SELECCIÓN NEBULA</span>
+          <span className="eyebrow">LA SELECCIÓN BOSS-IT</span>
           <h1>Encontrá tu próximo favorito</h1>
           <p>Tres elegidos para llevar tu experiencia un nivel más arriba.</p>
         </div>
