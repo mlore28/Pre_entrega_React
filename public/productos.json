@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "nombre": "Teclado Mecánico RGB",
+    "precio": 45000,
+    "descripcion": "Teclado mecánico switches azules con iluminación RGB personalizable.",
+    "imagen": "/product-placeholder.svg"
+  },
+  {
+    "id": 2,
+    "nombre": "Mouse Gamer 16000 DPI",
+    "precio": 25000,
+    "descripcion": "Mouse óptico ergonómico con sensor de alta precisión.",
+    "imagen": "/product-placeholder.svg"
+  },
+  {
+    "id": 3,
+    "nombre": "Monitor Gamer 24 Pulgadas",
+    "precio": 120000,
+    "descripcion": "Pantalla Full HD 144Hz 1ms panel IPS para máxima fluidez.",
+    "imagen": "/product-placeholder.svg"
+  }
+]
