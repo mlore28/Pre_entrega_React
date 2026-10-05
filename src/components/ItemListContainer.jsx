@@ -9,34 +9,30 @@ export const ItemListContainer = () => {
 
   useEffect(() => {
     const controller = new AbortController();
-
     getProducts(controller.signal)
-      .then((data) => {
-        setProductos(data);
-        setEstado('listo');
-      })
+      .then((data) => { setProductos(data); setEstado('listo'); })
       .catch((err) => {
         if (err.name === 'AbortError') return;
         setError(err.message);
         setEstado('error');
       });
-
     return () => controller.abort();
   }, []);
 
   return (
-    <div>
-      <h2>Catálogo de Productos</h2>
+    <section className="catalog">
+      <div className="section-heading">
+        <div>
+          <span className="eyebrow">LA SELECCIÓN NEBULA</span>
+          <h1>Encontrá tu próximo favorito</h1>
+          <p>Tres elegidos para llevar tu experiencia un nivel más arriba.</p>
+        </div>
+        <span className="catalog__count">03 <span>PRODUCTOS</span></span>
+      </div>
       {estado === 'cargando' && <p role="status">Cargando productos...</p>}
       {estado === 'error' && <p role="alert">{error}</p>}
       {estado === 'listo' && productos.length === 0 && <p>No hay productos disponibles.</p>}
-      {estado === 'listo' && productos.length > 0 && (
-        <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', marginTop: '20px' }}>
-          {productos.map((prod) => (
-            <Item key={prod.id} {...prod} />
-          ))}
-        </div>
-      )}
-    </div>
+      {estado === 'listo' && productos.length > 0 && <div className="product-grid">{productos.map((prod) => <Item key={prod.id} {...prod} />)}</div>}
+    </section>
   );
 };
