@@ -1,20 +1,25 @@
 import { Link } from 'react-router-dom';
 
-export const Item = ({ id, nombre, precio, imagen }) => (
-  <div style={{ border: '1px solid #ddd', padding: '15px', borderRadius: '8px', textAlign: 'center', width: '220px', boxShadow: '0 2px 5px rgba(0,0,0,0.1)' }}>
-    <img
-      src={imagen}
-      alt={nombre}
-      onError={(event) => {
-        event.currentTarget.onerror = null;
-        event.currentTarget.src = '/product-placeholder.svg';
-      }}
-      style={{ width: '100%', borderRadius: '4px' }}
-    />
-    <h4 style={{ margin: '10px 0 5px' }}>{nombre}</h4>
-    <p style={{ fontWeight: 'bold', color: '#28a745' }}>${precio}</p>
-    <Link to={`/producto/${id}`} style={{ display: 'inline-block', marginTop: '10px', background: '#007bff', color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: '4px' }}>
-      Ver Detalle
-    </Link>
-  </div>
-);
+export const Item = ({ id, nombre, precio, imagen, categoria, etiqueta }) => {
+  const imageUrl = new URL(import.meta.env.BASE_URL + imagen, window.location.href).href;
+
+  return (
+    <article className="product-card">
+      <Link className="product-card__image-link" to={'/producto/' + id} aria-label={'Ver ' + nombre}>
+        <div className="product-card__image">
+          <span className="product-card__badge">{etiqueta}</span>
+          <img src={imageUrl} alt={nombre} />
+          <span className="product-card__image-arrow" aria-hidden="true">↗</span>
+        </div>
+      </Link>
+      <div className="product-card__content">
+        <span className="product-card__category">{categoria}</span>
+        <h3>{nombre}</h3>
+        <div className="product-card__bottom">
+          <p className="product-card__price"><span>Precio final</span>{'$' + precio.toLocaleString('es-AR')}</p>
+          <Link className="product-card__link" to={'/producto/' + id} aria-label={'Ver detalle de ' + nombre}>Ver producto <span aria-hidden="true">→</span></Link>
+        </div>
+      </div>
+    </article>
+  );
+};
