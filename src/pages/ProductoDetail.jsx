@@ -53,26 +53,28 @@ export const ProductoDetail = () => {
       </section>
     );
   }
+  const imageUrl = new URL(`${import.meta.env.BASE_URL}${producto.imagen}`, window.location.href).href;
 
   return (
-    <div style={{ display: 'flex', gap: '30px', marginTop: '20px' }}>
-      <img
-        src={producto.imagen}
-        alt={producto.nombre}
-        onError={(event) => {
-          event.currentTarget.onerror = null;
-          event.currentTarget.src = '/product-placeholder.svg';
-        }}
-        style={{ width: '250px' }}
-      />
-      <div>
-        <h2>{producto.nombre}</h2>
-        <p>{producto.descripcion}</p>
-        <h3>${producto.precio}</h3>
-        <button onClick={() => addToCart(producto, 1)} style={{ padding: '10px 20px', background: '#28a745', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>
-          Agregar al Carrito
-        </button>
+    <section className="detail">
+      <div className="detail__image">
+        <span className="product-card__badge">{producto.etiqueta}</span>
+        <img src={imageUrl} alt={producto.nombre} />
       </div>
-    </div>
+      <div className="detail__content">
+        <Link className="back-link" to="/productos">← Volver a productos</Link>
+        <span className="product-card__category">{producto.categoria}</span>
+        <h1>{producto.nombre}</h1>
+        <p className="detail__description">{producto.descripcion}</p>
+        <div className="detail__price">
+          <span>Precio final</span>
+          <strong>${producto.precio.toLocaleString('es-AR')}</strong>
+        </div>
+        <button className="button button--primary detail__add" onClick={() => addToCart(producto, 1)}>
+          Agregar al carrito <span aria-hidden="true">→</span>
+        </button>
+        <p className="detail__note">✦ Compra simple · Atención personalizada</p>
+      </div>
+    </section>
   );
 };
