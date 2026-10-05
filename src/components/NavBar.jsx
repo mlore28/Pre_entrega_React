@@ -1,10 +1,10 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { CartWidget } from './CartWidget';
 
 export const NavBar = () => (
-  <nav style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
-    <Link to="/" style={{ textDecoration: 'none', color: '#007bff', fontWeight: 'bold' }}>Inicio</Link>
-    <Link to="/productos" style={{ textDecoration: 'none', color: '#007bff', fontWeight: 'bold' }}>Productos</Link>
+  <nav className="site-nav" aria-label="Navegación principal">
+    <NavLink to="/" end className={({ isActive }) => `site-nav__link${isActive ? ' is-active' : ''}`}>Inicio</NavLink>
+    <NavLink to="/productos" className={({ isActive }) => `site-nav__link${isActive ? ' is-active' : ''}`}>Productos</NavLink>
     <CartWidget />
   </nav>
 );
